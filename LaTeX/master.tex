@@ -41,11 +41,11 @@
 \AutorDerArbeit{Kai Fischer, Max Stubenbord}
 \Kurs{TINF18AI1}
 \Studienrichtung{angewandte Informatik}
-\Matrikelnummer{xxxxxx, 5379506}
+\Matrikelnummer{3683691, 5379506}
 \Studiengangsleiter{Prof. Dr. Holger Hofmann}
 \WissBetreuer{Prof. Dr. Karl Stroetmann}
-\Bearbeitungszeitraum{dd.mm.yyyy -- DD.MM.YYYY}
-\Abgabedatum{dd.mm.yyyy}
+\Bearbeitungszeitraum{24.03.2021 -- 11.06.2021}
+\Abgabedatum{11.06.2021}
 
 %%
 %% @stud
@@ -126,7 +126,7 @@
 %
 % @stud: nondisclosurenotice.tex bearbeiten
 %
-\input{meta/nondisclosurenotice}
+%\input{meta/nondisclosurenotice}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -180,6 +180,17 @@
 \input{chapters/conclusion/conclusion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LITERATURVERZEICHNIS
+% 
+% @stud: Literaturverzeichnis in Datei bibliography.bib anpassen 
+%
+\initializeBibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 \initializeAppendix
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -193,15 +204,17 @@
 
 \singlespacing
 
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% LITERATURVERZEICHNIS
+% Inhdex
 % 
-% @stud: Literaturverzeichnis in Datei bibliography.bib anpassen 
+% @stud: Hier kann ein Index erzeugt werden
 %
-\initializeBibliography
+%\addcontentsline{toc}{chapter}{Index}
+%\printindex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\addcontentsline{toc}{chapter}{Index}
-\printindex
 
 \end{document}
