@@ -8,7 +8,7 @@ Spannend ist hier allerdings, dass dies kein Indikator f"ur die Komplexit"at der
 Das weitere Vorgehen der Implementierung ist weitesgehend die Bearbeitung von kleinen Teilproblemen, welche sich aus dem eben genannten Vorgehen ergeben.\\
 So betrachten wir zun"achst die Anzahl der Permutationen, welche sich in einer Puzzelinstanz befinden. Um diese zu berechnen wird als Datenstruktur eine Liste mit der Dimension 1 ben"otigt.
 Anschlie"send muss die Liste durch tauschen der Elemente sortiert werden.
-Praktischerweise ist der L"osungszustand des Puzzels so definiert, dass der Index innerhalb der Liste und der Wert des zugeh"origen Elementes identisch sind. Somit kann f"ur jeden Index der entsprechende Wert innerhalb des Arrays gesucht werden, sodass eine minimale Anzahl von \textit{swaps} durchgef"uhrt werden. \\Die Anzahl der get"atigten \textit{swaps} liefert uns dann die Anzahl der vorhandenen Permutationen innerhalb der Puzzelinstanz.\\
+Praktischerweise ist der L"osungszustand des Puzzels so definiert, dass der Index innerhalb der Liste und der Wert des zugeh"origen Elementes identisch sind. Somit kann f"ur jeden Index der entsprechende Wert innerhalb der Liste gesucht werden, sodass eine minimale Anzahl von \textit{swaps} durchgef"uhrt werden. \\Die Anzahl der get"atigten \textit{swaps} liefert uns dann die Anzahl der vorhandenen Permutationen innerhalb der Puzzelinstanz.\\
 Die Implementierung ist dabei wie folgt:
 \begin{minted}[linenos,breaklines,breakanywhere]{python}
 def get_inversion_count(Puzzle: tuple) -> int:
