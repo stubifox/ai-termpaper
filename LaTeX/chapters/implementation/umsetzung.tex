@@ -36,13 +36,12 @@ def swap(idxA, idxB, Puzzle_1d):
 \vspace{.25cm}
 definiert ist.\\
 Die Funktion \textbf{find\_tile\_1d} gibt den Index einer 1-Dimensionalen Liste zur"uck, an der das entsprechende Element zu finden ist. Diese ist auch im Anhanhg unter \ref{code:validate-15-puzzle:py} zu finden.\\
-Nun muss als n"achstes die Distanz des Blank-Feldes vom Startzustand zum Zielszustand berechnet werden. Hierbei wird die $x,y$ Position des Blank-Feldes im Startzustand gesucht und anschlie"send wie bei der Manhattan \texttt{TODO: Referenz auf Kais sektion} Distanz die Absolute Differenz beider Zust"ande addiert. Da die $x,y$ Position des Blank-Feldes im Endzustand immer $0,0$ ist, muss diese nicht berechnet werden, wird in der Funktion allerdings auch gesucht, sodass bei einer Erweiterung noch der Endzustand variieren kann.
-\texttt{TODO: N"achster Abschnitt f"ur Kai, Code hier einf"ugen}
-Sei $\alpha,\beta$ nun die Position des Blank-Feldes der Matrix $A$ und $\gamma,\epsilon$ die Position des Blank-Feldes der Matrix $B$, so ist der Abstand beider Blank-Felder durch \\
+Nun muss als n"achstes die Distanz des Blank-Feldes vom Startzustand zum Zielszustand berechnet werden. Wie schon in Abschnitt \ref{sec:Permutation} angesprochen kann die Anzahl der notwendigen Z"uge um das Blank-Feld von der Position im Startzustand zu der Position im Zielzustand zu bewegen durch die Manhattan-Distanz ermittelt werden..\\ Da die $x,y$ Position des Blank-Feldes im Endzustand immer $0,0$ ist, muss diese nicht berechnet werden, wird in der Funktion allerdings auch gesucht, sodass bei einer Erweiterung noch der Endzustand variieren kann.
+Sei $x_1,y_2$ nun die Position des Blank-Feldes im Startzustand und $x_2,y_2$ die Position des Blank-Feldes im Endzustand, so ist der Abstand beider Blank-Felder durch \\
 \begin{center}
-    $\left | \alpha - \gamma \right | + \left | \beta - \epsilon \right |$
+    $\left | x_1 - y_1 \right | + \left | x_2 - y_2 \right |$
 \end{center}
-definiert.
+definiert.\\
 Die dazugeh"orige Funktion \textbf{manhattan} ist auch im Anhang unter \ref{code:validate-15-puzzle:py} zu finden.\\
 Abschlie"send wird verglichen, ob die Summe der Distanz und die Anzahl der Permutationen im Startzustand die gleiche Parit"at besitzen. Stimmen die Parit"aten "uberein, so ist die Instanz l"osbar, sind diese unterschiedlich, so ist diese unl"osbar.
 
