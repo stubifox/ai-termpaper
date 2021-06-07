@@ -1,5 +1,22 @@
 % !TEX root =  master.tex
 \chapter{Grundlagen}
+In diesem Kapitel werden die theoretischen Grundlagen und Gedanken für die Umsetzung im nächsten Kapitel \ref{chap:Implementation} vorgestellt. Die Lösung und das Vorgehen basieren maßgeblich auf dem Beitrag \afz{\MaxLink{https://www.youtube.com/watch?v=YI1WqYKHi78}{Why is this Puzzle Impossible? - Numberphile}} von Herrn Steven Bradlow zur Lösbarkeit des \afz{14-15 puzzles} aus der Einleitung auf dem Youtube Kanal \afz{Numberphile} \autocite{Unsolvable-14-15-Numberphile-YT:online}.%
+%
+\input{chapters/fundamentals/puzzleToList.tex}
 \input{chapters/fundamentals/permutation.tex}
-\input{chapters/fundamentals/kontext.tex}
-\input{chapters/fundamentals/sortieralgorithmen.tex}
+\input{chapters/fundamentals/permutationExamples.tex}% Betrachtung eines lösbaren 4x4 Puzzles von Stroetman & Betrachtung des Loyd puzzles mit dem Algorithmus
+%
+% \input{chapters/fundamentals/kontext.tex}% was sollte hier nochmal rein? wird das nciht pben abgegrenzt?
+%
+%
+%
+% \input{chapters/fundamentals/sortieralgorithmen.tex} % bissle OP das hier reinzu nehmen, lieber später den umgesetzten Sortier algorithmus Bubblesort erwähnen und sagen dass er halt auch nur Transpositionen macht somit nach E1 gültige Lösungen erhät und nach E2 geeigent ist die Parität zu berechnen , nachvollziehbar ist und deshlab genommen wird
+%
+%
+% Endzustände sind nicht ineinander überführbar
+%
+%
+% Betrachtung von 2x2 Puzzle um zu zeigen dass es immer 2pfade gibt
+%hier könnten wir die Theorie dazu aufschrieben udn in Max Teil könnten wir den Test dazu implemetnieren in dme wir alle Permutationen notieren und in gruppen sortieren, jede aus der Gruppe muss mit jeder aus der gruppe erreichbar sein, und jedes aus Gruppe darf nicht von der anderen Gruppe aus erreicht werden. Das ganze dann halt über so ein assert generelles aufspalte eines Normalen und eienes Testdokumentes 
+% Betrachtung des Loyd Puzzles
+
