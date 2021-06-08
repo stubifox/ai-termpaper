@@ -24,30 +24,30 @@ Der Algorithmus aus dem vorherigen Abschnitt schätzt diese Puzzles ebenfalls al
 \begin{figure}[H]
 	\begin{enumerate}
 		\item[\textbf{S1.1}] Konvertierung der Puzzle-Zustände in Zahlenreihen
-		\begin{align*}
-		start_{ex1} = \{0,1,2,3,4,5,6,8,14,7,11,10,9,15,12,13\} \\
-		end_{ex1} = \{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15\}
-		\end{align*}
+		      \begin{align*}
+			      start_{ex1} = \{0,1,2,3,4,5,6,8,14,7,11,10,9,15,12,13\} \\
+			      end_{ex1} = \{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15\}
+		      \end{align*}
 		\item[\textbf{S1.2}] Notwendige Transpositionen $T_{ex1}$ um $start_{ex1}$ zu sortieren:
-		\begin{align*}		
-		0,1,2,3,4,5,6,8,14,7,11,10,9,15,12,13&\hspace{20pt} (\space 8,\space 7)\\
-		0,1,2,3,4,5,6,7,14,8,11,10,9,15,12,13&\hspace{20pt} (14,\space 8)\\
-		0,1,2,3,4,5,6,7,8,14,11,10,9,15,12,13&\hspace{20pt} (14,\space 9)\\
-		0,1,2,3,4,5,6,7,8,9,11,10,14,15,12,13&\hspace{20pt} (11,10)\\
-		0,1,2,3,4,5,6,7,8,9,10,11,14,15,12,13&\hspace{20pt} (14,12)\\
-		0,1,2,3,4,5,6,7,8,9,10,11,12,15,14,13&\hspace{20pt} (15,13)\\
-		0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15&
-		\end{align*}
-		\begin{align*}
-		T_{ex1} = \{(8,7),(14,8),(14,9),(11,10),(14,12),(15,13)\}\\
-		\left\vert T_{ex1}\right\vert = 6 \rightarrow \texttt{Parität} = 0	
-		\end{align*}
-		\item[\textbf{S1.3}] Anzahl der Notwendigen Züge $z_{ex1}$ um das Leerfeld von der Postion aus dem Startzustand(Koordinaten $(0,0)$ ) an die Postion des Zielzustandes (Koordinaten $(0,0)$) zu verschieben.
-		\begin{align*}		
-		z_{ex1} = \left | 0 - 0 \right | + \left | 0 - 0 \right |\\
-		z_{ex1} = 0 \rightarrow \texttt{Parität} = 0
-		\end{align*}	
-		\item[\textbf{S1.4}] Die Paritäten stimmen überein, das Puzzle \textcolor{green}{ist Lösbar}.	
+		      \begin{align*}
+			      0,1,2,3,4,5,6,8,14,7,11,10,9,15,12,13 & \hspace{20pt} (\space 8,\space 7) \\
+			      0,1,2,3,4,5,6,7,14,8,11,10,9,15,12,13 & \hspace{20pt} (14,\space 8)       \\
+			      0,1,2,3,4,5,6,7,8,14,11,10,9,15,12,13 & \hspace{20pt} (14,\space 9)       \\
+			      0,1,2,3,4,5,6,7,8,9,11,10,14,15,12,13 & \hspace{20pt} (11,10)             \\
+			      0,1,2,3,4,5,6,7,8,9,10,11,14,15,12,13 & \hspace{20pt} (14,12)             \\
+			      0,1,2,3,4,5,6,7,8,9,10,11,12,15,14,13 & \hspace{20pt} (15,13)             \\
+			      0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 &
+		      \end{align*}
+		      \begin{align*}
+			      T_{ex1} = \{(8,7),(14,8),(14,9),(11,10),(14,12),(15,13)\} \\
+			      \left\vert T_{ex1}\right\vert = 6 \rightarrow \texttt{Parität} = 0
+		      \end{align*}
+		\item[\textbf{S1.3}] Anzahl der Notwendigen Züge $z_{ex1}$ um das Leerfeld von der Postion aus dem Startzustand (Koordinaten $(0,0)$ ) an die Postion des Zielzustandes (Koordinaten $(0,0)$) zu verschieben.
+		      \begin{align*}
+			      z_{ex1} = \left | 0 - 0 \right | + \left | 0 - 0 \right | \\
+			      z_{ex1} = 0 \rightarrow \texttt{Parität} = 0
+		      \end{align*}
+		\item[\textbf{S1.4}] Die Paritäten stimmen überein, das Puzzle \textcolor{OliveGreen}{ist Lösbar}.
 	\end{enumerate}
 	\caption{Beispiel1: Anwendung des Algorithmus auf ein Vorlesungsbeispiel \label{fig:Ex1_algo}}
 \end{figure}
@@ -81,25 +81,25 @@ Auch hier wird der beschriebene Algorithmus angewandt, das vorgehen ist in Abb.\
 \begin{figure}[H]
 	\begin{enumerate}
 		\item[\textbf{S2.1}] Konvertierung der Puzzle-Zustände in Zahlenreihen
-		\begin{align*}
-		start_{ex2} = \{1,2,3,4,5,6,7,8,9,10,11,12,13,15,14,0\} \\
-		end_{ex2} = \{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0\}
-		\end{align*}
+		      \begin{align*}
+			      start_{ex2} = \{1,2,3,4,5,6,7,8,9,10,11,12,13,15,14,0\} \\
+			      end_{ex2} = \{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0\}
+		      \end{align*}
 		\item[\textbf{S2.2}] Notwendige Transpositionen $T_{ex2}$ um $start_{ex2}$ zu $end_{ex2}$ überführen:
-		\begin{align*}		
-		1,2,3,4,5,6,7,8,9,10,11,12,13,15,14,0&\hspace{20pt} (15,14)\\
-		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0&
-		\end{align*}
-		\begin{align*}
-		T_{ex2} = \{(14,15)\}\\
-		\left\vert T_{ex2}\right\vert = 1 \rightarrow \texttt{Parität} = 1	
-		\end{align*}
+		      \begin{align*}
+			      1,2,3,4,5,6,7,8,9,10,11,12,13,15,14,0 & \hspace{20pt} (15,14) \\
+			      1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0 &
+		      \end{align*}
+		      \begin{align*}
+			      T_{ex2} = \{(14,15)\} \\
+			      \left\vert T_{ex2}\right\vert = 1 \rightarrow \texttt{Parität} = 1
+		      \end{align*}
 		\item[\textbf{S2.3}] Anzahl der Notwendigen Züge $z_{ex2}$ um das Leerfeld von der Postion aus dem Startzustand(Koordinaten $(3,3)$ ) an die Postion des Zielzustandes (Koordinaten $(3,3)$) zu verschieben.
-		\begin{align*}		
-		z_{ex1} = \left | 3 - 3 \right | + \left | 3 - 3 \right |\\
-		z_{ex1} = 0 \rightarrow \texttt{Parität} = 0
-		\end{align*}	
-		\item[\textbf{S2.4}] Die Paritäten stimmen nicht überein, das Puzzle ist somit \textcolor{red}{nicht Lösbar}.	
+		      \begin{align*}
+			      z_{ex1} = \left | 3 - 3 \right | + \left | 3 - 3 \right | \\
+			      z_{ex1} = 0 \rightarrow \texttt{Parität} = 0
+		      \end{align*}
+		\item[\textbf{S2.4}] Die Paritäten stimmen nicht überein, das Puzzle ist somit \textcolor{red}{nicht Lösbar}.
 	\end{enumerate}
 	\caption{Beispiel2: Anwendung des Algorithmus auf das Loyd Puzzle \label{fig:Ex2_algo}}
 \end{figure}
@@ -111,41 +111,41 @@ Die Wahl des Endzustandes ist sehr relevant bei der Lösbarkeitsüberprüfung ei
 \begin{figure}[H]
 	\begin{enumerate}
 		\item[\textbf{S3.1}] Konvertierung der Puzzle-Zustände in Zahlenreihen
-		\begin{align*}
-		end_{Loyd} = \{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0\} \\
-		end_{Stroetmann} = \{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15\}
-		\end{align*}
-		\item[\textbf{S3.2}] Notwendige Transpositionen $T_{ex2}$ um $start_{ex2}$ zu $end_{ex2}$ überführen:
-		\begin{align*}			
-		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0 &\hspace{20pt} (1,0)\\
-		0,2,3,4,5,6,7,8,9,10,11,12,13,14,15,1 &\hspace{20pt} (2,1)\\
-		0,1,3,4,5,6,7,8,9,10,11,12,13,14,15,3 &\hspace{20pt} (3,2)\\
-		0,1,2,4,5,6,7,8,9,10,11,12,13,14,15,3 &\hspace{20pt} (4,3)\\
-		0,1,2,3,5,6,7,8,9,10,11,12,13,14,15,4 &\hspace{20pt} (5,4)\\
-		0,1,2,3,4,6,7,8,9,10,11,12,13,14,15,5 &\hspace{20pt} (6,5)\\
-		0,1,2,3,4,5,7,8,9,10,11,12,13,14,15,6 &\hspace{20pt} (7,6)\\
-		0,1,2,3,4,5,6,8,9,10,11,12,13,14,15,7 &\hspace{20pt} (8,7)\\
-		0,1,2,3,4,5,6,7,9,10,11,12,13,14,15,8 &\hspace{20pt} (9,8)\\
-		0,1,2,3,4,5,6,7,8,10,11,12,13,14,15,9 &\hspace{20pt} (10,9)\\
-		0,1,2,3,4,5,6,7,8,9,11,12,13,14,15,10 &\hspace{20pt} (11,10)\\
-		0,1,2,3,4,5,6,7,8,9,10,12,13,14,15,11 &\hspace{20pt} (12,11)\\
-		0,1,2,3,4,5,6,7,8,9,10,11,13,14,15,12 &\hspace{20pt} (13,12)\\
-		0,1,2,3,4,5,6,7,8,9,10,11,12,14,15,13 &\hspace{20pt} (14,13)\\
-		0,1,2,3,4,5,6,7,8,9,10,11,12,13,15,14 &\hspace{20pt} (15,14)\\
-		0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
-		\end{align*}
-		\begin{align*}
-		T_{ex3} = \{(1,0),(2,1),(3,2),(4,3),(5,4),(6,5),(7,6),(8,7),(9,8),(10,9),(11,10),\\(12,11),(13,12),(14,13),(15,14)\}\\
-		\end{align*}
-		\begin{align*}
-		\left\vert T_{ex3}\right\vert = 15 \rightarrow \texttt{Parität} = 1	
-		\end{align*}
+		      \begin{align*}
+			      end_{Loyd} = \{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0\} \\
+			      end_{Stroetmann} = \{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15\}
+		      \end{align*}
+		\item[\textbf{S3.2}] Notwendige Transpositionen $T_{ex3}$ um $end_{Loyd}$ zu $end_{Stroetmann}$ überführen:
+		      \begin{align*}
+			      1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0 & \hspace{20pt} (1,0)   \\
+			      0,2,3,4,5,6,7,8,9,10,11,12,13,14,15,1 & \hspace{20pt} (2,1)   \\
+			      0,1,3,4,5,6,7,8,9,10,11,12,13,14,15,3 & \hspace{20pt} (3,2)   \\
+			      0,1,2,4,5,6,7,8,9,10,11,12,13,14,15,3 & \hspace{20pt} (4,3)   \\
+			      0,1,2,3,5,6,7,8,9,10,11,12,13,14,15,4 & \hspace{20pt} (5,4)   \\
+			      0,1,2,3,4,6,7,8,9,10,11,12,13,14,15,5 & \hspace{20pt} (6,5)   \\
+			      0,1,2,3,4,5,7,8,9,10,11,12,13,14,15,6 & \hspace{20pt} (7,6)   \\
+			      0,1,2,3,4,5,6,8,9,10,11,12,13,14,15,7 & \hspace{20pt} (8,7)   \\
+			      0,1,2,3,4,5,6,7,9,10,11,12,13,14,15,8 & \hspace{20pt} (9,8)   \\
+			      0,1,2,3,4,5,6,7,8,10,11,12,13,14,15,9 & \hspace{20pt} (10,9)  \\
+			      0,1,2,3,4,5,6,7,8,9,11,12,13,14,15,10 & \hspace{20pt} (11,10) \\
+			      0,1,2,3,4,5,6,7,8,9,10,12,13,14,15,11 & \hspace{20pt} (12,11) \\
+			      0,1,2,3,4,5,6,7,8,9,10,11,13,14,15,12 & \hspace{20pt} (13,12) \\
+			      0,1,2,3,4,5,6,7,8,9,10,11,12,14,15,13 & \hspace{20pt} (14,13) \\
+			      0,1,2,3,4,5,6,7,8,9,10,11,12,13,15,14 & \hspace{20pt} (15,14) \\
+			      0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+		      \end{align*}
+		      \begin{align*}
+			      T_{ex3} = \{(1,0),(2,1),(3,2),(4,3),(5,4),(6,5),(7,6),(8,7),(9,8),(10,9),(11,10), \\(12,11),(13,12),(14,13),(15,14)\}\\
+		      \end{align*}
+		      \begin{align*}
+			      \left\vert T_{ex3}\right\vert = 15 \rightarrow \texttt{Parität} = 1
+		      \end{align*}
 		\item[\textbf{S3.3}] Anzahl der Notwendigen Züge $z_{ex2}$ um das Leerfeld von der Postion aus Loyds Endzustand(Koordinaten $(3,3)$ ) an die Postion des Zielzustandes von Stroetmann (Koordinaten $(0,0)$) zu verschieben.
-		\begin{align*}		
-		z_{ex3} = \left | 3 - 0 \right | + \left | 3 - 0 \right |\\
-		z_{ex3} = 6 \rightarrow \texttt{Parität} = 0
-		\end{align*}	
-		\item[\textbf{S3.4}] Die Paritäten stimmen nicht überein, das Puzzle ist somit \textcolor{red}{nicht Lösbar}.	
+		      \begin{align*}
+			      z_{ex3} = \left | 3 - 0 \right | + \left | 3 - 0 \right | \\
+			      z_{ex3} = 6 \rightarrow \texttt{Parität} = 0
+		      \end{align*}
+		\item[\textbf{S3.4}] Die Paritäten stimmen nicht überein, das Puzzle ist somit \textcolor{red}{nicht Lösbar}.
 	\end{enumerate}
 	\caption{Beispiel2: Anwendung des Algorithmus auf die Überführbarkeit der Endzustände von Loyd und Stroetmann. \label{fig:Ex3_algo}}
 \end{figure}
