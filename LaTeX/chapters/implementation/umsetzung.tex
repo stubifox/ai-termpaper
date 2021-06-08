@@ -1,15 +1,15 @@
 \section{Umsetzung} % (fold)
 \label{cha:Umsetzung}
 \texttt{Der vollst"andige Quellcode ist im Anhang unter \ref{code:validate-15-puzzle:py} zu finden.}\\\\
-Zur Umsetzung wird zu erst eine Datenstruktur definiert, in welcher die Instanzen des 15-Puzzels ausgewertet werden. Hierf"ur werden Tupel von Tupeln verwendet.
+Zur Umsetzung wird zu erst eine Datenstruktur definiert, in welcher die Instanzen des 15-Puzzles ausgewertet werden. Hierf"ur werden Tupel von Tupeln verwendet.
 Anschlie"send ist die gernerelle Idee, wie auch schon in \texttt{kais abschnitt?} vorgestellt zu schauen, ob die Anzahl der Permutationen bei der Datenstruktur als $1$-Dimensionale Liste und der Abstand des Blank-Feldes vom Start- zum Zielzustand die gleiche Parit"at besitzen.
-Ist diese gleich, so ist das Puzzel l"osbar, vice versa unl"osbar.\\
-Spannend ist hier allerdings, dass dies kein Indikator f"ur die Komplexit"at der L"osbarkeit ist. So kann ein l"osbares Puzzel mit den zur Verf"ugung stehenden Algorithmen wie \textit{A*} oder \textit{IDA*} nicht in angemessener Zeit gel"ost werden.\\
+Ist diese gleich, so ist das Puzzle l"osbar, vice versa unl"osbar.\\
+Spannend ist hier allerdings, dass dies kein Indikator f"ur die Komplexit"at der L"osbarkeit ist. So kann ein l"osbares Puzzle mit den zur Verf"ugung stehenden Algorithmen wie \textit{A*} oder \textit{IDA*} nicht in angemessener Zeit gel"ost werden.\\
 Das weitere Vorgehen der Implementierung ist weitesgehend die Bearbeitung von kleinen Teilproblemen, welche sich aus dem eben genannten Vorgehen ergeben.\\
-So betrachten wir zun"achst die Anzahl der Permutationen, welche sich in einer Puzzelinstanz befinden. Um diese zu berechnen wird als Datenstruktur eine Liste mit der Dimension 1 ben"otigt.
+So betrachten wir zun"achst die Anzahl der Permutationen, welche sich in einer Puzzleinstanz befinden. Um diese zu berechnen wird als Datenstruktur eine Liste mit der Dimension 1 ben"otigt.
 Anschlie"send muss die Liste durch tauschen der Elemente sortiert werden.
 \texttt{n"achsten Satz "uberarbeiten!}\\
-Vereinfacht wird dieser Schritt dadurch, dass der L"osungszustand des Puzzels so definiert ist, dass der Index innerhalb der Liste und der Wert des zugeh"origen Elementes identisch sind. Somit kann f"ur jeden Index der entsprechende Wert innerhalb der Liste gesucht werden, sodass eine minimale Anzahl von \textit{swaps} durchgef"uhrt werden. \\Die Anzahl der get"atigten \textit{swaps} liefert uns dann die Anzahl der mindestens durchzuf"uhrenden Permutationen innerhalb der Puzzelinstanz.\\
+Vereinfacht wird dieser Schritt dadurch, dass der L"osungszustand des Puzzles so definiert ist, dass der Index innerhalb der Liste und der Wert des zugeh"origen Elementes identisch sind. Somit kann f"ur jeden Index der entsprechende Wert innerhalb der Liste gesucht werden, sodass eine minimale Anzahl von \textit{swaps} durchgef"uhrt werden. \\Die Anzahl der get"atigten \textit{swaps} liefert uns dann die Anzahl der mindestens durchzuf"uhrenden Permutationen innerhalb der Puzzleinstanz.\\
 Die Implementierung ist dabei wie folgt:
 \begin{minted}[linenos,breaklines,breakanywhere]{python}
 def get_inversion_count(Puzzle: tuple) -> int:
