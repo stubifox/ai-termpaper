@@ -1,6 +1,6 @@
 \section{Nutzen des Algorithmus an Beispielen} % (fold)
 \label{sec:PermutationExamples}
-Aus der Vorlesung von Herrn Stroetmann und dem begleitenden Skript \autocite{github-stroetmann:online} ist bekannt, dass sich Puzzle aus Abb.\ref{fig:Ex1_start} lösen, also in den Zielzustand aus Abb.\ref{fig:Ex1_end} überführen lässt.\\
+Aus der Vorlesung von Herrn Stroetmann und dem begleitenden Skript \autocite{github-stroetmann:online} ist bekannt, dass sich Puzzle aus Abb. \ref{fig:Ex1_start} lösen, also in den Zielzustand aus Abb. \ref{fig:Ex1_end} überführen lässt.\\
 \begin{minipage}{\linewidth}
 	\begin{minipage}[t]{0.45\linewidth}
 		\begin{figure}[H]
@@ -42,22 +42,22 @@ Der Algorithmus aus dem vorherigen Abschnitt schätzt diese Puzzles ebenfalls al
 			      T_{ex1} = \{(8,7),(14,8),(14,9),(11,10),(14,12),(15,13)\} \\
 			      \left\vert T_{ex1}\right\vert = 6 \rightarrow \texttt{Parität} = 0
 		      \end{align*}
-		\item[\textbf{S1.3}] Anzahl der Notwendigen Züge $z_{ex1}$ um das Leerfeld von der Postion aus dem Startzustand (Koordinaten $(0,0)$) an die Postion des Zielzustandes (Koordinaten $(0,0)$) zu verschieben.
+		\item[\textbf{S1.3}] Anzahl der notwendigen Züge $z_{ex1}$ um das Leerfeld von der Postion aus dem Startzustand (Koordinaten $(0,0)$) an die Postion des Zielzustandes (Koordinaten $(0,0)$) zu verschieben.
 		      \begin{align*}
 			      z_{ex1} = \left | 0 - 0 \right | + \left | 0 - 0 \right | \\
 			      z_{ex1} = 0 \rightarrow \texttt{Parität} = 0
 		      \end{align*}
 		\item[\textbf{S1.4}] Die Paritäten stimmen überein, das Puzzle \textcolor{OliveGreen}{ist lösbar}.
 	\end{enumerate}
-	\caption{Beispiel1: Anwendung des Algorithmus auf ein Vorlesungsbeispiel \label{fig:Ex1_algo}}
+	\caption{Beispiel 1: Anwendung des Algorithmus auf ein Vorlesungsbeispiel \label{fig:Ex1_algo}}
 \end{figure}
-Dazu wird wie in Abb.\ref{fig:Ex1_algo} schrittweise vorgegangen. Zunächst werden, wie im Abschnitt \ref{sec:PuzzleToList} und in Schritt 1 (S1.1) dargestellt, die Zustände in Zahlenreihen konvertiert.
+Dazu wird wie in Abb. \ref{fig:Ex1_algo} schrittweise vorgegangen. Zunächst werden, wie im Abschnitt \ref{sec:PuzzleToList} und in Schritt 1 (S1.1) dargestellt, die Zustände in Zahlenreihen konvertiert.
 Anschließend werden die Paritäten ermittelt (S1.2 und S1.3). Zunächst die Parität der Anzahl notwendiger Transpositionen und anschlie"send die Parität benötigter Züge um die Leerstelle korrekt zu platzieren. Im abschlie"senden Schritt (S1.4) werden die ermittelten Paritäten verglichen. In diesem Beispiel stimmen diese Paritäten überein. Das Beispiel ist also lösbar.%
 \WNL%
 %
 % Loyd
 %
-Als nächstes wird das Puzzle von Loyd aus der Einleitung betrachtet. Der bereits bekannte Startzustand ist in Abb.\ref{fig:Ex2_start} zur wereinfachung erneut abgebildet. Der Ziel Zustand ist daneben in Abb.\ref{fig:Ex2_end} dargestellt.\\
+Als nächstes wird das Puzzle von Loyd aus der Einleitung betrachtet. Der bereits bekannte Startzustand ist in Abb. \ref{fig:Ex2_start} zur Vereinfachung erneut abgebildet. Der Zielzustand ist daneben in Abb. \ref{fig:Ex2_end} dargestellt.\\
 \begin{minipage}{\linewidth}
 	\begin{minipage}[t]{0.45\linewidth}
 		\begin{figure}[H]
@@ -77,7 +77,7 @@ Als nächstes wird das Puzzle von Loyd aus der Einleitung betrachtet. Der bereit
 		\end{figure}
 	\end{minipage}
 \end{minipage}\\\WNL%
-Auch hier wird der beschriebene Algorithmus angewandt, das vorgehen ist in Abb.\ref{fig:Ex2_algo} skizziert.
+Auch hier wird der beschriebene Algorithmus angewandt, das Vorgehen ist in Abb. \ref{fig:Ex2_algo} skizziert.
 \begin{figure}[H]
 	\begin{enumerate}
 		\item[\textbf{S2.1}] Konvertierung der Puzzle-Zustände in Zahlenreihen
@@ -85,7 +85,7 @@ Auch hier wird der beschriebene Algorithmus angewandt, das vorgehen ist in Abb.\
 			      start_{ex2} = \{1,2,3,4,5,6,7,8,9,10,11,12,13,15,14,0\} \\
 			      end_{ex2} = \{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0\}
 		      \end{align*}
-		\item[\textbf{S2.2}] Notwendige Transpositionen $T_{ex2}$ um $start_{ex2}$ zu $end_{ex2}$ überführen:
+		\item[\textbf{S2.2}] Notwendige Transpositionen $T_{ex2}$ um $start_{ex2}$ zu $end_{ex2}$ zu überführen:
 		      \begin{align*}
 			      1,2,3,4,5,6,7,8,9,10,11,12,13,15,14,0 & \hspace{20pt} (15,14) \\
 			      1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0 &
@@ -94,7 +94,7 @@ Auch hier wird der beschriebene Algorithmus angewandt, das vorgehen ist in Abb.\
 			      T_{ex2} = \{(14,15)\} \\
 			      \left\vert T_{ex2}\right\vert = 1 \rightarrow \texttt{Parität} = 1
 		      \end{align*}
-		\item[\textbf{S2.3}] Anzahl der Notwendigen Züge $z_{ex2}$ um das Leerfeld von der Postion aus dem Startzustand (Koordinaten $(3,3)$) an die Postion des Zielzustandes (Koordinaten $(3,3)$) zu verschieben.
+		\item[\textbf{S2.3}] Anzahl der notwendigen Züge $z_{ex2}$, um das Leerfeld von der Postion aus dem Startzustand (Koordinaten $(3,3)$) an die Postion des Zielzustandes (Koordinaten $(3,3)$) zu verschieben.
 		      \begin{align*}
 			      z_{ex1} = \left | 3 - 3 \right | + \left | 3 - 3 \right | \\
 			      z_{ex1} = 0 \rightarrow \texttt{Parität} = 0
@@ -103,11 +103,11 @@ Auch hier wird der beschriebene Algorithmus angewandt, das vorgehen ist in Abb.\
 	\end{enumerate}
 	\caption{Beispiel2: Anwendung des Algorithmus auf das Loyd Puzzle \label{fig:Ex2_algo}}
 \end{figure}
-Da die Zielzustände der beiden Puzzle verschieden sind (Abb.\ref{fig:Ex1_end} und Abb.\ref{fig:Ex2_end}) unterscheiden sich auch die Zahlenreihen als welche diese dargestellt werden. Doch zur Übersichtlichkeit wurde sowohl in S1.1 als auch in S2.1 die Leerstelle mit der Zahl \afz{0} kodiert. Es ist leicht zu erkennen, dass nur eine Transposition notwendig ist, um die Zahlenreihe $start_{ex2}$ in die Reihe $end_{ex2}$ zu überführen, die Parität des Vorgangs ist also 1. Da sich die Leerstelle bereits an der korrekten Stelle befindet, sind keine Züge notwendig, die Parität ist also 0. Da die Paritäten unterschiedlich sind, kategorisiert der Algorithmus dieses Puzzle korrekter weise als  nicht lösbar ein.\WNL
+Da die Zielzustände der beiden Puzzle verschieden sind (Abb. \ref{fig:Ex1_end} und Abb. \ref{fig:Ex2_end}), unterscheiden sich auch die Zahlenreihen als welche diese dargestellt werden. Doch zur Übersichtlichkeit wurde sowohl in S1.1 als auch in S2.1 die Leerstelle mit der Zahl \afz{0} kodiert. Es ist leicht zu erkennen, dass nur eine Transposition notwendig ist, um die Zahlenreihe $start_{ex2}$ in die Reihe $end_{ex2}$ zu überführen, die Parität des Vorgangs ist also 1. Da sich die Leerstelle bereits an der korrekten Stelle befindet, sind keine Züge notwendig, die Parität ist also 0. Da die Paritäten unterschiedlich sind, kategorisiert der Algorithmus dieses Puzzle korrekter weise als  nicht lösbar ein.\WNL
 %
 % endzustände
 %
-Die Wahl des Endzustandes ist sehr relevant bei der Lösbarkeitsüberprüfung eines Puzzles. In der Sektion \ref{sec:Permutation} wurde explizit hervorgehoben, dass der in der Literatur übliche Endzustand (Abb.\ref{fig:Ex2_end}) von dem in Herrn Stroetmanns Skript \autocite{github-stroetmann:online} (Abb.\ref{fig:Ex1_end}) verschieden ist. In Abb.\ref{fig:Ex3_algo} zeigt der Algorithmus, dass diese Endzustände nicht ineinander Überführbar sind, In Schritt S3.1 werden Leerstellen erneut mit der Zahl \afz{0} kodiert.
+Die Wahl des Endzustandes ist relevant bei der Lösbarkeitsüberprüfung eines Puzzles. In der Sektion \ref{sec:Permutation} wurde explizit hervorgehoben, dass sich der in der Literatur übliche Endzustand (Abb. \ref{fig:Ex2_end}) von dem in Herrn Stroetmanns Skript \autocite{github-stroetmann:online} (Abb. \ref{fig:Ex1_end}) unterscheidet. In Abb. \ref{fig:Ex3_algo} zeigt der Algorithmus, dass diese Endzustände nicht ineinander Überführbar sind, In Schritt S3.1 werden Leerstellen erneut mit der Zahl \afz{0} kodiert.
 \begin{figure}[H]
 	\begin{enumerate}
 		\item[\textbf{S3.1}] Konvertierung der Puzzle-Zustände in Zahlenreihen
@@ -140,14 +140,14 @@ Die Wahl des Endzustandes ist sehr relevant bei der Lösbarkeitsüberprüfung ei
 		      \begin{align*}
 			      \left\vert T_{ex3}\right\vert = 15 \rightarrow \texttt{Parität} = 1
 		      \end{align*}
-		\item[\textbf{S3.3}] Anzahl der Notwendigen Züge $z_{ex2}$ um das Leerfeld von der Postion aus Loyds Endzustand (Koordinaten $(3,3)$) an die Postion des Zielzustandes von Stroetmann (Koordinaten $(0,0)$) zu verschieben.
+		\item[\textbf{S3.3}] Anzahl der notwendigen Züge $z_{ex2}$ um das Leerfeld von der Postion aus Loyds Endzustand (Koordinaten $(3,3)$) an die Postion des Zielzustandes von Stroetmann (Koordinaten $(0,0)$) zu verschieben.
 		      \begin{align*}
 			      z_{ex3} = \left | 3 - 0 \right | + \left | 3 - 0 \right | \\
 			      z_{ex3} = 6 \rightarrow \texttt{Parität} = 0
 		      \end{align*}
 		\item[\textbf{S3.4}] Die Paritäten stimmen nicht überein, das Puzzle ist somit \textcolor{red}{nicht lösbar}.
 	\end{enumerate}
-	\caption{Beispiel2: Anwendung des Algorithmus auf die Überführbarkeit der Endzustände von Loyd und Stroetmann. \label{fig:Ex3_algo}}
+	\caption{Beispiel 2: Anwendung des Algorithmus auf die Überführbarkeit der Endzustände von Loyd und Stroetmann. \label{fig:Ex3_algo}}
 \end{figure}
 Ist ein Puzzle also für den einen Endzustand lösbar, ist es für den anderen Endzustand automatisch nicht lösbar, da es keine Möglichkeit gibt die Endzustände ineinander zu überführen.
 %Endzustände
