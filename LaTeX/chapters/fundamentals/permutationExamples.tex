@@ -1,6 +1,6 @@
 \section{Nutzen des Algorithmus an Beispielen} % (fold)
 \label{sec:PermutationExamples}
-Aus der Vorlesung von Herrn Stroetmann und dem begleitenden Skript \autocite{github-stroetmann:online} ist bekannt, dass sich Puzzle aus Abb. \ref{fig:Ex1_start} lösen, also in den Zielzustand aus Abb. \ref{fig:Ex1_end} überführen lässt.\\
+Aus der Vorlesung von Herrn Stroetmann und dem begleitenden Skript \autocite{github-stroetmann:online} ist bekannt, dass sich das Puzzle aus Abb. \ref{fig:Ex1_start} lösen, also in den Zielzustand aus Abb. \ref{fig:Ex1_end} überführen lässt.\\
 \begin{minipage}{\linewidth}
 	\begin{minipage}[t]{0.45\linewidth}
 		\begin{figure}[H]
@@ -103,7 +103,7 @@ Auch hier wird der beschriebene Algorithmus angewandt, das Vorgehen ist in Abb. 
 	\end{enumerate}
 	\caption{Beispiel2: Anwendung des Algorithmus auf das Loyd Puzzle \label{fig:Ex2_algo}}
 \end{figure}
-Da die Zielzustände der beiden Puzzle verschieden sind (Abb. \ref{fig:Ex1_end} und Abb. \ref{fig:Ex2_end}), unterscheiden sich auch die Zahlenreihen als welche diese dargestellt werden. Doch zur Übersichtlichkeit wurde sowohl in S1.1 als auch in S2.1 die Leerstelle mit der Zahl \afz{0} kodiert. Es ist leicht zu erkennen, dass nur eine Transposition notwendig ist, um die Zahlenreihe $start_{ex2}$ in die Reihe $end_{ex2}$ zu überführen, die Parität des Vorgangs ist also 1. Da sich die Leerstelle bereits an der korrekten Stelle befindet, sind keine Züge notwendig, die Parität ist also 0. Da die Paritäten unterschiedlich sind, kategorisiert der Algorithmus dieses Puzzle korrekter weise als  nicht lösbar ein.\WNL
+Da die Zielzustände der beiden Puzzle verschieden sind (Abb. \ref{fig:Ex1_end} und Abb. \ref{fig:Ex2_end}), unterscheiden sich auch die Zahlenreihen als welche diese dargestellt werden. Doch zur Übersichtlichkeit wurde sowohl in S1.1 als auch in S2.1 die Leerstelle mit der Zahl \afz{0} kodiert. Es ist leicht zu erkennen, dass nur eine Transposition notwendig ist, um die Zahlenreihe $start_{ex2}$ in die Reihe $end_{ex2}$ zu überführen, die Parität des Vorgangs ist also 1. Da sich die Leerstelle bereits an der korrekten Stelle befindet, sind keine Züge notwendig, die Parität ist also 0. Da die Paritäten unterschiedlich sind, kategorisiert der Algorithmus dieses Puzzle korrekterweise als  nicht lösbar ein.\WNL
 %
 % endzustände
 %
@@ -119,7 +119,7 @@ Die Wahl des Endzustandes ist relevant bei der Lösbarkeitsüberprüfung eines P
 		      \begin{align*}
 			      1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0 & \hspace{20pt} (1,0)   \\
 			      0,2,3,4,5,6,7,8,9,10,11,12,13,14,15,1 & \hspace{20pt} (2,1)   \\
-			      0,1,3,4,5,6,7,8,9,10,11,12,13,14,15,3 & \hspace{20pt} (3,2)   \\
+			      0,1,3,4,5,6,7,8,9,10,11,12,13,14,15,2 & \hspace{20pt} (3,2)   \\
 			      0,1,2,4,5,6,7,8,9,10,11,12,13,14,15,3 & \hspace{20pt} (4,3)   \\
 			      0,1,2,3,5,6,7,8,9,10,11,12,13,14,15,4 & \hspace{20pt} (5,4)   \\
 			      0,1,2,3,4,6,7,8,9,10,11,12,13,14,15,5 & \hspace{20pt} (6,5)   \\

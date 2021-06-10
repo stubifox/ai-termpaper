@@ -2,13 +2,12 @@
 \label{cha:Umsetzung}
 \texttt{Der vollst"andige Quellcode ist im Anhang unter \ref{code:validate-15-puzzle:py} zu finden.}\\\\
 Zur Umsetzung wird zuerst eine Datenstruktur definiert, in welcher die Instanzen des 15-Puzzles ausgewertet werden. Hierf"ur werden Tupel von Tupeln verwendet.
-Anschlie"send ist die generelle Idee, wie auch schon in Abschnitt \ref{sec:PermutationExamples} und \ref{sec:Permutation} vorgestellt, zu schauen, ob die Anzahl der Permutationen bei der Datenstruktur als $1$-dimensionale Liste und der Abstand des Blank-Feldes vom Start- zum Zielzustand die gleiche Parit"at besitzen.
+Anschlie"send ist die generelle Idee, wie auch schon in Abschnitt \ref{sec:PermutationExamples} und \ref{sec:Permutation} vorgestellt, zu schauen, ob die Anzahl der Permutationen bei der Datenstruktur als eindimensionale Liste und der Abstand des Blank-Feldes vom Start- zum Zielzustand die gleiche Parit"at besitzen.
 Ist diese gleich, so ist das Puzzle l"osbar, vice versa unl"osbar.\\
 Spannend ist hier allerdings, dass dies kein Indikator f"ur die Komplexit"at der L"osbarkeit ist. So kann ein l"osbares Puzzle mit den zur Verf"ugung stehenden Algorithmen wie \textit{A*} oder \textit{IDA*} nicht in angemessener Zeit gel"ost werden.\\
 Das weitere Vorgehen der Implementierung ist weitestgehend die Bearbeitung von kleinen Teilproblemen, welche sich aus dem eben genannten Vorgehen ergeben.\\
 So betrachten wir zun"achst die Anzahl der Permutationen, welche sich in einer Puzzleinstanz befinden. Um diese zu berechnen, wird als Datenstruktur eine Liste mit der Dimension 1 ben"otigt.
 Anschlie"send muss die Liste durch Tauschen der Elemente sortiert werden.
-\texttt{n"achsten Satz "uberarbeiten!}\\
 Vereinfacht wird dieser Schritt dadurch, dass der L"osungszustand des Puzzles so definiert ist, dass der Index innerhalb der Liste und der Wert des zugeh"origen Elementes identisch sind. Somit kann f"ur jeden Index der entsprechende Wert innerhalb der Liste gesucht werden, sodass eine minimale Anzahl von \textit{swaps} durchgef"uhrt werden. \\Die Anzahl der get"atigten \textit{swaps} liefert uns dann die Anzahl der mindestens durchzuf"uhrenden Permutationen innerhalb der Puzzleinstanz.\\
 Die Implementierung ist dabei wie folgt:
 \begin{minted}[linenos,breaklines,breakanywhere]{python}
@@ -35,15 +34,15 @@ def swap(idxA, idxB, Puzzle_1d):
 \end{minted}
 \vspace{.25cm}
 definiert ist.\\
-Die Funktion \textbf{find\_tile\_1d} gibt den Index einer $1$-dimensionalen Liste zur"uck, an der das entsprechende Element zu finden ist. Diese ist auch im Anhang unter \ref{code:validate-15-puzzle:py} zu finden.\\
-Nun muss als N"achstes die Distanz des Blank-Feldes vom Startzustand zum Zielszustand berechnet werden. Wie schon in Abschnitt \ref{sec:Permutation} angesprochen, kann die Anzahl der notwendigen Z"uge um das Blank-Feld von der Position im Startzustand zu der Position im Zielzustand zu bewegen durch die Manhattan-Distanz ermittelt werden..\\ Da die $x,y$ Position des Blank-Feldes im Endzustand immer $0,0$ ist, muss diese nicht berechnet werden, wird in der Funktion allerdings auch gesucht, sodass bei einer Erweiterung noch der Endzustand variieren kann.
+Die Funktion \textbf{find\_tile\_1d} gibt den Index einer eindimensionalen Liste zur"uck, an dem das entsprechende Element zu finden ist. Diese ist auch im Anhang unter \ref{code:validate-15-puzzle:py} zu finden.\\
+Nun muss als N"achstes die Distanz des Blank-Feldes vom Startzustand zum Zielszustand berechnet werden. Wie schon in Abschnitt \ref{sec:Permutation} angesprochen, kann die Anzahl der notwendigen Z"uge, um das Blank-Feld von der Position im Startzustand zu der Position im Zielzustand zu bewegen, durch die Manhattan-Distanz ermittelt werden.\\ Da die $x,y$ Position des Blank-Feldes im Endzustand immer $0,0$ ist, muss diese nicht berechnet werden, wird in der Funktion trotzdem gesucht, sodass bei einer Erweiterung noch der Endzustand variieren kann.
 Sei $x_1,y_2$ nun die Position des Blank-Feldes im Startzustand und $x_2,y_2$ die Position des Blank-Feldes im Endzustand, so ist der Abstand beider Blank-Felder durch \\
 \begin{center}
     $\left | x_1 - x_2 \right | + \left | y_1 - y_2 \right |$
 \end{center}
 definiert.\\
 Die dazugeh"orige Funktion \textbf{manhattan} ist auch im Anhang unter \ref{code:validate-15-puzzle:py} zu finden.\\
-Abschlie"send wird verglichen, ob die Summe der Distanz und die Anzahl der Permutationen im Startzustand die gleiche Parit"at besitzen. Stimmen die Parit"aten "uberein, so ist die Instanz l"osbar, sind diese unterschiedlich, so ist diese unl"osbar.
+Abschlie"send wird verglichen, ob die Distanz und die Anzahl der Permutationen die gleiche Parit"at besitzen. Stimmen die Parit"aten "uberein, so ist die Instanz l"osbar, sind diese unterschiedlich, so ist diese unl"osbar.
 
 % \inputminted[linenos,breaklines,breakanywhere]{python}{../code/15-solvable-v1.py}
 % chapter Umsetzung (end)
