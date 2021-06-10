@@ -2,7 +2,7 @@
 \label{cha:Umsetzung}
 \texttt{Der vollst"andige Quellcode ist im Anhang unter \ref{code:validate-15-puzzle:py} zu finden.}\\\\
 Zur Umsetzung wird zuerst eine Datenstruktur definiert, in welcher die Instanzen des 15-Puzzles ausgewertet werden. Hierf"ur werden Tupel von Tupeln verwendet.
-Anschlie"send ist die generelle Idee, wie auch schon in \texttt{kais abschnitt?} vorgestellt, zu schauen, ob die Anzahl der Permutationen bei der Datenstruktur als $1$-dimensionale Liste und der Abstand des Blank-Feldes vom Start- zum Zielzustand die gleiche Parit"at besitzen.
+Anschlie"send ist die generelle Idee, wie auch schon in Abschnitt \ref{sec:PermutationExamples} und \ref{sec:Permutation} vorgestellt, zu schauen, ob die Anzahl der Permutationen bei der Datenstruktur als $1$-dimensionale Liste und der Abstand des Blank-Feldes vom Start- zum Zielzustand die gleiche Parit"at besitzen.
 Ist diese gleich, so ist das Puzzle l"osbar, vice versa unl"osbar.\\
 Spannend ist hier allerdings, dass dies kein Indikator f"ur die Komplexit"at der L"osbarkeit ist. So kann ein l"osbares Puzzle mit den zur Verf"ugung stehenden Algorithmen wie \textit{A*} oder \textit{IDA*} nicht in angemessener Zeit gel"ost werden.\\
 Das weitere Vorgehen der Implementierung ist weitestgehend die Bearbeitung von kleinen Teilproblemen, welche sich aus dem eben genannten Vorgehen ergeben.\\
